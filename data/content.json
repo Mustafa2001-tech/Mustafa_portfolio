@@ -23,21 +23,21 @@
   "skill_tree": {
     "nodes": [
       {
-        "id": "kau", "icon": "🎓", "year": "2022–2026", "color": "#00FFB2", "type": "education",
+        "id": "kau", "icon": "🎓", "year": "2023–2027", "color": "#00FFB2", "type": "education",
         "title": "King Abdulaziz University", "subtitle": "B.Sc. Computer Engineering",
         "description": "Pursuing a Bachelor's in Computer Engineering. Focus areas include digital design, VLSI, embedded systems, and algorithms.",
         "skills": ["Digital Logic", "Embedded Systems", "Algorithms", "Signal Processing"],
         "x": 50, "y": 10
       },
       {
-        "id": "meta", "icon": "📜", "year": "2023", "color": "#4285F4", "type": "certification",
+        "id": "meta", "icon": "📜", "year": "2026", "color": "#4285F4", "type": "certification",
         "title": "Meta Back-End Developer", "subtitle": "Professional Certificate",
         "description": "Completed Meta's Back-End Developer Professional Certificate covering Django, REST APIs, and database architecture.",
         "skills": ["Python", "Django", "REST APIs", "MySQL", "Linux"],
         "x": 20, "y": 38
       },
       {
-        "id": "google", "icon": "📜", "year": "2023", "color": "#4285F4", "type": "certification",
+        "id": "google", "icon": "📜", "year": "2026", "color": "#4285F4", "type": "certification",
         "title": "Google Advanced Data Analytics", "subtitle": "Professional Certificate",
         "description": "Advanced Data Analytics by Google — statistical analysis, machine learning, and data storytelling.",
         "skills": ["Python", "Pandas", "ML", "Tableau", "R", "BigQuery"],
