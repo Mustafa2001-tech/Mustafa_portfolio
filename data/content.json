@@ -23,35 +23,35 @@
   "skill_tree": {
     "nodes": [
       {
-        "id": "kau", "icon": "🎓", "year": "2022–2026", "color": "#00FFB2", "type": "education",
+        "id": "kau", "icon": "🎓", "year": "2023–2027", "color": "#00FFB2", "type": "education",
         "title": "King Abdulaziz University", "subtitle": "B.Sc. Computer Engineering",
         "description": "Pursuing a Bachelor's in Computer Engineering. Focus areas include digital design, VLSI, embedded systems, and algorithms.",
         "skills": ["Digital Logic", "Embedded Systems", "Algorithms", "Signal Processing"],
         "x": 50, "y": 10
       },
       {
-        "id": "meta", "icon": "📜", "year": "2023", "color": "#4285F4", "type": "certification",
+        "id": "meta", "icon": "📜", "year": "2026", "color": "#4285F4", "type": "certification",
         "title": "Meta Back-End Developer", "subtitle": "Professional Certificate",
         "description": "Completed Meta's Back-End Developer Professional Certificate covering Django, REST APIs, and database architecture.",
         "skills": ["Python", "Django", "REST APIs", "MySQL", "Linux"],
         "x": 20, "y": 38
       },
       {
-        "id": "google", "icon": "📜", "year": "2023", "color": "#4285F4", "type": "certification",
+        "id": "google", "icon": "📜", "year": "2026", "color": "#4285F4", "type": "certification",
         "title": "Google Advanced Data Analytics", "subtitle": "Professional Certificate",
         "description": "Advanced Data Analytics by Google — statistical analysis, machine learning, and data storytelling.",
         "skills": ["Python", "Pandas", "ML", "Tableau", "R", "BigQuery"],
         "x": 80, "y": 38
       },
       {
-        "id": "vlsi", "icon": "⚡", "year": "2024", "color": "#FF6B35", "type": "project",
+        "id": "vlsi", "icon": "⚡", "year": "2025", "color": "#FF6B35", "type": "project",
         "title": "VLSI Design Project", "subtitle": "CMOS ALU on 45nm",
         "description": "Designed a full 4-bit CMOS ALU using Cadence Virtuoso on a 45nm process node. Validated with Monte Carlo simulation.",
         "skills": ["Cadence Virtuoso", "SPICE", "CMOS", "Layout", "DRC/LVS"],
         "x": 35, "y": 65
       },
       {
-        "id": "fullstack", "icon": "⚙", "year": "2024", "color": "#A855F7", "type": "skill",
+        "id": "fullstack", "icon": "⚙", "year": "2025", "color": "#A855F7", "type": "skill",
         "title": "Full-Stack Engineering", "subtitle": "Python · Next.js · FastAPI",
         "description": "Built full-stack applications combining Python backends with modern frontend frameworks and cloud deployments.",
         "skills": ["Next.js", "FastAPI", "PostgreSQL", "Docker", "Vercel"],
