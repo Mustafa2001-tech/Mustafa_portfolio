@@ -44,14 +44,14 @@
         "x": 80, "y": 38
       },
       {
-        "id": "vlsi", "icon": "⚡", "year": "2024", "color": "#FF6B35", "type": "project",
+        "id": "vlsi", "icon": "⚡", "year": "2025", "color": "#FF6B35", "type": "project",
         "title": "VLSI Design Project", "subtitle": "CMOS ALU on 45nm",
         "description": "Designed a full 4-bit CMOS ALU using Cadence Virtuoso on a 45nm process node. Validated with Monte Carlo simulation.",
         "skills": ["Cadence Virtuoso", "SPICE", "CMOS", "Layout", "DRC/LVS"],
         "x": 35, "y": 65
       },
       {
-        "id": "fullstack", "icon": "⚙", "year": "2024", "color": "#A855F7", "type": "skill",
+        "id": "fullstack", "icon": "⚙", "year": "2025", "color": "#A855F7", "type": "skill",
         "title": "Full-Stack Engineering", "subtitle": "Python · Next.js · FastAPI",
         "description": "Built full-stack applications combining Python backends with modern frontend frameworks and cloud deployments.",
         "skills": ["Next.js", "FastAPI", "PostgreSQL", "Docker", "Vercel"],
