@@ -29,7 +29,7 @@ export default function Home() {
         </div>
 
         <div className="chips fade-up-2">
-          {['VLSI Design','Data Analytics','Back-End Eng.','KAU · 2026'].map(c => (
+          {['VLSI Design','Data Analytics','Back-End Eng.','KAU · 2027'].map(c => (
             <span key={c} style={{ fontSize:10, color:'var(--txt2)', fontFamily:"'JetBrains Mono',monospace", padding:'4px 12px', border:'1px solid var(--bdr)', borderRadius:100 }}>{c}</span>
           ))}
         </div>
