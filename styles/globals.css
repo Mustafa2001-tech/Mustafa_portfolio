@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/* ── Cyber-Dark Theme (default) ───────────────────────────── */
+:root {
+  --bg:       #070709;
+  --bg2:      #0d0d12;
+  --bg3:      #111118;
+  --glass:    rgba(255,255,255,0.04);
+  --glass-h:  rgba(255,255,255,0.08);
+  --glass-b:  rgba(255,255,255,0.08);
+  --acc:      #00FFB2;
+  --acc2:     #A855F7;
+  --acc3:     #FF6B35;
+  --acc4:     #4285F4;
+  --txt:      #F0F0F0;
+  --txt2:     #8A8A9A;
+  --txt3:     #444455;
+  --bdr:      rgba(255,255,255,0.07);
+  --bdr-h:    rgba(0,255,178,0.3);
+  --glow:     0 0 30px rgba(0,255,178,0.15);
+  --glow2:    0 0 40px rgba(168,85,247,0.2);
+  --shad:     0 8px 32px rgba(0,0,0,0.6);
+  --shad2:    0 20px 60px rgba(0,0,0,0.8);
+  --noise:    0.03;
+}
+
+/* ── Minimal-Paper Theme ──────────────────────────────────── */
+html[data-theme="paper"] {
+  --bg:       #F7F5F0;
+  --bg2:      #EEECE7;
+  --bg3:      #E8E6E0;
+  --glass:    rgba(0,0,0,0.03);
+  --glass-h:  rgba(0,0,0,0.06);
+  --glass-b:  rgba(0,0,0,0.08);
+  --acc:      #1A1A2E;
+  --acc2:     #6B21A8;
+  --acc3:     #C2410C;
+  --acc4:     #1D4ED8;
+  --txt:      #1A1A1A;
+  --txt2:     #4A4A5A;
+  --txt3:     #9A9AAA;
+  --bdr:      rgba(0,0,0,0.08);
+  --bdr-h:    rgba(26,26,46,0.4);
+  --glow:     0 0 30px rgba(26,26,46,0.08);
+  --glow2:    0 0 40px rgba(107,33,168,0.1);
+  --shad:     0 4px 24px rgba(0,0,0,0.08);
+  --shad2:    0 12px 40px rgba(0,0,0,0.12);
+  --noise:    0.015;
+}
+
+/* ── Reset ────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+
+body {
+  background: var(--bg);
+  color: var(--txt);
+  font-family: 'Space Mono', monospace;
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: background 0.4s ease, color 0.4s ease;
+  cursor: none !important;
+}
+
+/* Noise overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: var(--noise);
+  pointer-events: none;
+  z-index: 9999;
+  transition: opacity 0.4s ease;
+}
+
+* { cursor: none !important; }
+
+/* ── Typography ───────────────────────────────────────────── */
+.font-display { font-family: 'Syne', sans-serif; font-weight: 800; letter-spacing: -0.03em; }
+.font-mono    { font-family: 'JetBrains Mono', monospace; }
+.font-body    { font-family: 'Space Mono', monospace; }
+
+/* ── Glass Card ───────────────────────────────────────────── */
+.gc {
+  background: var(--glass);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid var(--glass-b);
+  border-radius: 12px;
+  transition: background 0.3s, border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+.gc:hover {
+  background: var(--glass-h);
+  border-color: var(--bdr-h);
+  box-shadow: var(--glow);
+  transform: translateY(-2px);
+}
+
+/* ── Section label ────────────────────────────────────────── */
+.section-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--acc);
+}
+
+/* ── Glitch hover ─────────────────────────────────────────── */
+.glitch { position: relative; }
+.glitch:hover::before,
+.glitch:hover::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+}
+.glitch:hover::before { animation: g1 0.3s linear; color: var(--acc2); z-index: -1; }
+.glitch:hover::after  { animation: g2 0.3s linear; color: var(--acc3); z-index: -2; }
+@keyframes g1 {
+  0%  { clip-path: inset(0 0 90% 0); transform: translate(-2px); }
+  40% { clip-path: inset(40% 0 40% 0); transform: translate(2px); }
+  100%{ clip-path: inset(70% 0 15% 0); transform: translate(0); }
+}
+@keyframes g2 {
+  0%  { clip-path: inset(50% 0 30% 0); transform: translate(2px); }
+  50% { clip-path: inset(10% 0 75% 0); transform: translate(-2px); }
+  100%{ clip-path: inset(30% 0 55% 0); transform: translate(0); }
+}
+
+/* ── Fade in up ───────────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fadeUp 0.6s ease forwards; }
+.fade-up-1 { animation: fadeUp 0.6s 0.1s ease both; }
+.fade-up-2 { animation: fadeUp 0.6s 0.2s ease both; }
+.fade-up-3 { animation: fadeUp 0.6s 0.3s ease both; }
+.fade-up-4 { animation: fadeUp 0.6s 0.4s ease both; }
+.fade-up-5 { animation: fadeUp 0.6s 0.5s ease both; }
+
+/* ── SVG Skill Tree ───────────────────────────────────────── */
+.edge {
+  stroke-dasharray: 8 4;
+  animation: dash 3s linear infinite;
+  fill: none;
+  stroke-width: 1.5;
+}
+@keyframes dash { to { stroke-dashoffset: -36; } }
+
+.node-ring {
+  fill: none;
+  stroke-width: 1.5;
+  animation: ring-pulse 2.2s ease-out infinite;
+}
+@keyframes ring-pulse {
+  0%   { r: 18; opacity: 0.8; }
+  100% { r: 34; opacity: 0; }
+}
+
+/* ── Nav Orb ──────────────────────────────────────────────── */
+.nav-orb {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  background: var(--glass);
+  backdrop-filter: blur(24px) saturate(200%);
+  -webkit-backdrop-filter: blur(24px) saturate(200%);
+  border: 1px solid var(--glass-b);
+  border-radius: 100px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: var(--shad), var(--glow);
+  transition: box-shadow 0.3s, border-color 0.3s;
+}
+.nav-orb:hover {
+  box-shadow: var(--shad), var(--glow2);
+  border-color: var(--bdr-h);
+}
+
+/* ── Scrollbar ────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg2); }
+::-webkit-scrollbar-thumb { background: var(--acc); border-radius: 3px; }
+
+/* ── Pulse dot ────────────────────────────────────────────── */
+@keyframes pulse-dot {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0,255,178,0.5); }
+  50%       { box-shadow: 0 0 0 8px rgba(0,255,178,0); }
+}
+.pulse-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--acc);
+  animation: pulse-dot 2s infinite;
+}
+
+/* ── Gate wire SVG ────────────────────────────────────────── */
+.gw { stroke-width: 2; fill: none; transition: stroke 0.25s, filter 0.25s; }
+.gw.lo { stroke: #333340; }
+.gw.hi { stroke: #00FFB2; filter: drop-shadow(0 0 4px #00FFB2); }
+.gd { transition: fill 0.25s, filter 0.25s; }
+.gd.lo { fill: #333340; }
+.gd.hi { fill: #00FFB2; filter: drop-shadow(0 0 6px #00FFB2); }

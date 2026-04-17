@@ -1,0 +1,102 @@
+{
+  "profile": {
+    "name": "Your Name",
+    "title": "Engineering Student",
+    "subtitle": "VLSI · Data Analytics · Backend Engineering",
+    "university": "King Abdulaziz University",
+    "major": "Computer Engineering",
+    "graduation_year": "2026",
+    "location": "Jeddah, Saudi Arabia",
+    "email": "your.email@example.com",
+    "github": "https://github.com/yourusername",
+    "linkedin": "https://linkedin.com/in/yourusername",
+    "bio": "Engineering student at KAU specializing in VLSI design and data-driven systems. Passionate about building things that matter — from silicon to software.",
+    "tagline": "From Silicon to Software.",
+    "stack": ["Python", "CMOS", "FastAPI", "Cadence", "SQL", "Docker", "Verilog", "TFLite"]
+  },
+  "stats": [
+    { "value": "4th", "label": "YEAR" },
+    { "value": "45nm", "label": "VLSI NODE" },
+    { "value": "2", "label": "CERTS" },
+    { "value": "∞", "label": "CURIOSITY" }
+  ],
+  "skill_tree": {
+    "nodes": [
+      {
+        "id": "kau", "icon": "🎓", "year": "2022–2026", "color": "#00FFB2", "type": "education",
+        "title": "King Abdulaziz University", "subtitle": "B.Sc. Computer Engineering",
+        "description": "Pursuing a Bachelor's in Computer Engineering. Focus areas include digital design, VLSI, embedded systems, and algorithms.",
+        "skills": ["Digital Logic", "Embedded Systems", "Algorithms", "Signal Processing"],
+        "x": 50, "y": 10
+      },
+      {
+        "id": "meta", "icon": "📜", "year": "2023", "color": "#4285F4", "type": "certification",
+        "title": "Meta Back-End Developer", "subtitle": "Professional Certificate",
+        "description": "Completed Meta's Back-End Developer Professional Certificate covering Django, REST APIs, and database architecture.",
+        "skills": ["Python", "Django", "REST APIs", "MySQL", "Linux"],
+        "x": 20, "y": 38
+      },
+      {
+        "id": "google", "icon": "📜", "year": "2023", "color": "#4285F4", "type": "certification",
+        "title": "Google Advanced Data Analytics", "subtitle": "Professional Certificate",
+        "description": "Advanced Data Analytics by Google — statistical analysis, machine learning, and data storytelling.",
+        "skills": ["Python", "Pandas", "ML", "Tableau", "R", "BigQuery"],
+        "x": 80, "y": 38
+      },
+      {
+        "id": "vlsi", "icon": "⚡", "year": "2024", "color": "#FF6B35", "type": "project",
+        "title": "VLSI Design Project", "subtitle": "CMOS ALU on 45nm",
+        "description": "Designed a full 4-bit CMOS ALU using Cadence Virtuoso on a 45nm process node. Validated with Monte Carlo simulation.",
+        "skills": ["Cadence Virtuoso", "SPICE", "CMOS", "Layout", "DRC/LVS"],
+        "x": 35, "y": 65
+      },
+      {
+        "id": "fullstack", "icon": "⚙", "year": "2024", "color": "#A855F7", "type": "skill",
+        "title": "Full-Stack Engineering", "subtitle": "Python · Next.js · FastAPI",
+        "description": "Built full-stack applications combining Python backends with modern frontend frameworks and cloud deployments.",
+        "skills": ["Next.js", "FastAPI", "PostgreSQL", "Docker", "Vercel"],
+        "x": 65, "y": 65
+      },
+      {
+        "id": "capstone", "icon": "★", "year": "2025", "color": "#FFD700", "type": "project",
+        "title": "Capstone: Edge AI System", "subtitle": "FPGA + TensorFlow Lite",
+        "description": "Final year project: deploying a pruned neural network onto an FPGA for real-time gesture recognition at <10ms latency.",
+        "skills": ["FPGA", "Verilog", "TensorFlow Lite", "HLS", "Embedded C"],
+        "x": 50, "y": 90
+      }
+    ],
+    "edges": [
+      { "from": "kau", "to": "meta" },
+      { "from": "kau", "to": "google" },
+      { "from": "meta", "to": "vlsi" },
+      { "from": "google", "to": "vlsi" },
+      { "from": "meta", "to": "fullstack" },
+      { "from": "google", "to": "fullstack" },
+      { "from": "vlsi", "to": "capstone" },
+      { "from": "fullstack", "to": "capstone" }
+    ]
+  },
+  "projects": [
+    {
+      "id": "p1", "title": "CMOS ALU Design", "year": "2024", "status": "completed",
+      "description": "Full 4-bit CMOS ALU designed at transistor level using Cadence Virtuoso on 45nm process. Monte Carlo yield analysis included.",
+      "tags": ["VLSI", "Cadence", "CMOS", "45nm"],
+      "github": "https://github.com/yourusername/cmos-alu",
+      "demo": null
+    },
+    {
+      "id": "p2", "title": "Real-Time Data Pipeline", "year": "2023", "status": "completed",
+      "description": "End-to-end pipeline using Apache Kafka, Python, and BigQuery. Processes 50K+ events/minute for analytics dashboards.",
+      "tags": ["Kafka", "Python", "BigQuery", "Docker"],
+      "github": "https://github.com/yourusername/data-pipeline",
+      "demo": "https://demo.example.com"
+    },
+    {
+      "id": "p3", "title": "Edge AI Gesture System", "year": "2025", "status": "in-progress",
+      "description": "TensorFlow Lite model compressed and deployed onto FPGA for real-time hand gesture recognition with <10ms latency.",
+      "tags": ["FPGA", "Verilog", "TFLite", "HLS"],
+      "github": "https://github.com/yourusername/edge-ai",
+      "demo": null
+    }
+  ]
+}

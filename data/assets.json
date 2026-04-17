@@ -1,0 +1,40 @@
+{
+  "library": [
+    {
+      "id": "vlsi", "label": "VLSI & EDA", "color": "#FF6B35",
+      "items": [
+        { "name": "Cadence Virtuoso", "desc": "Industry-standard analog & custom IC design. Used for schematic, layout, and simulation.", "url": "https://cadence.com", "favicon": "https://www.cadence.com/favicon.ico", "tags": ["VLSI", "EDA", "Analog"] },
+        { "name": "ngspice", "desc": "Open-source SPICE simulator. Essential for validating CMOS designs before layout.", "url": "https://ngspice.sourceforge.io", "favicon": null, "tags": ["Simulation", "SPICE"] },
+        { "name": "Magic VLSI", "desc": "Open-source layout tool for DRC and layout used in academic settings.", "url": "http://opencircuitdesign.com/magic/", "favicon": null, "tags": ["Layout", "DRC"] },
+        { "name": "SkyWater SKY130 PDK", "desc": "Open-source 130nm PDK from Google. Enables real chip tape-out for free.", "url": "https://skywater-pdk.readthedocs.io", "favicon": null, "tags": ["PDK", "Open Source"] }
+      ]
+    },
+    {
+      "id": "data", "label": "Data & ML", "color": "#4285F4",
+      "items": [
+        { "name": "TensorFlow", "desc": "End-to-end ML platform. Used for model training, deployment, and TFLite edge inference.", "url": "https://tensorflow.org", "favicon": "https://www.tensorflow.org/favicon.ico", "tags": ["ML", "Python"] },
+        { "name": "Pandas", "desc": "Python data manipulation library. Core tool for data cleaning and transformation.", "url": "https://pandas.pydata.org", "favicon": null, "tags": ["Data", "Python"] },
+        { "name": "Google BigQuery", "desc": "Serverless data warehouse for large-scale analytics. Used in Google's certificate.", "url": "https://cloud.google.com/bigquery", "favicon": null, "tags": ["SQL", "Cloud"] },
+        { "name": "scikit-learn", "desc": "ML library for Python with clean APIs for classification, regression, and clustering.", "url": "https://scikit-learn.org", "favicon": null, "tags": ["ML", "Python"] }
+      ]
+    },
+    {
+      "id": "backend", "label": "Backend & APIs", "color": "#00FFB2",
+      "items": [
+        { "name": "FastAPI", "desc": "Modern, high-performance Python API framework with automatic OpenAPI docs.", "url": "https://fastapi.tiangolo.com", "favicon": null, "tags": ["Python", "API"] },
+        { "name": "Django", "desc": "High-level Python web framework. Covered in Meta Back-End Developer certificate.", "url": "https://djangoproject.com", "favicon": null, "tags": ["Python", "Web"] },
+        { "name": "Next.js", "desc": "React framework for production. Powers this portfolio.", "url": "https://nextjs.org", "favicon": null, "tags": ["React", "Full-Stack"] },
+        { "name": "Docker", "desc": "Container platform for consistent deployments across all backend projects.", "url": "https://docker.com", "favicon": null, "tags": ["DevOps", "Containers"] }
+      ]
+    },
+    {
+      "id": "learning", "label": "Learning Resources", "color": "#A855F7",
+      "items": [
+        { "name": "Coursera", "desc": "Platform hosting both Meta Back-End and Google Advanced Data Analytics certificates.", "url": "https://coursera.org", "favicon": null, "tags": ["Certificates", "Learning"] },
+        { "name": "Nand2Tetris", "desc": "Build a modern computer from first principles. Foundational for hardware-software interface.", "url": "https://nand2tetris.org", "favicon": null, "tags": ["Architecture", "HDL"] },
+        { "name": "MIT Missing Semester", "desc": "Essential CS tools: shell, vim, git, debugging. Bridges theory and practice.", "url": "https://missing.csail.mit.edu", "favicon": null, "tags": ["Tools", "Linux"] },
+        { "name": "3Blue1Brown", "desc": "Visual, intuitive explanations of math and ML. Essential for real understanding.", "url": "https://3blue1brown.com", "favicon": null, "tags": ["Math", "ML"] }
+      ]
+    }
+  ]
+}
