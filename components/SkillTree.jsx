@@ -68,7 +68,7 @@ export default function SkillTree() {
       <div style={{ width:'1px', background:'var(--bdr)', margin:'0 0 24px', height:1, width:'100%' }} />
 
       {/* SVG */}
-      <svg viewBox="0 0 900 520" style={{ width:'100%', height:'auto', overflow:'visible' }}>
+      <div className="tree-svg-wrap"><svg viewBox="0 0 900 520">
         <defs>
           {EDGE_COLORS.map(([c1,c2],i) => (
             <linearGradient key={i} id={`eg${i}`} x1="0%" y1="0%" x2="0%" y2="100%">
@@ -120,7 +120,7 @@ export default function SkillTree() {
             </>}
           </g>
         ))}
-      </svg>
+      </svg></div>
 
       {/* Detail Panel */}
       {node && (

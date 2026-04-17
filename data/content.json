@@ -1,15 +1,15 @@
 {
   "profile": {
-    "name": "Mustafa Abdelrahman",
-    "title": "Electrical and Computer Engineering Student",
+    "name": "Your Name",
+    "title": "Engineering Student",
     "subtitle": "VLSI · Data Analytics · Backend Engineering",
     "university": "King Abdulaziz University",
     "major": "Computer Engineering",
-    "graduation_year": "2027",
+    "graduation_year": "2026",
     "location": "Jeddah, Saudi Arabia",
-    "email": "mustafa.ishag@outlook.com",
-    "github": "https://github.com/Mustafa2001-tech",
-    "linkedin": "www.linkedin.com/in/mustafa-abdelrahmanakg",
+    "email": "your.email@example.com",
+    "github": "https://github.com/yourusername",
+    "linkedin": "https://linkedin.com/in/yourusername",
     "bio": "Engineering student at KAU specializing in VLSI design and data-driven systems. Passionate about building things that matter — from silicon to software.",
     "tagline": "From Silicon to Software.",
     "stack": ["Python", "CMOS", "FastAPI", "Cadence", "SQL", "Docker", "Verilog", "TFLite"]

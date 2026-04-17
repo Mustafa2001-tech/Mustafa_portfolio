@@ -74,7 +74,7 @@ export default function GateSimulator() {
     <div style={{ width:'100%', maxWidth:680 }}>
       {/* Gate selector */}
       <div className="section-label" style={{ marginBottom:10 }}>// SELECT GATE</div>
-      <div style={{ display:'grid', gridTemplateColumns:'repeat(4,1fr)', gap:8, marginBottom:20 }}>
+      <div className="gate-grid">
         {GATES.map(g => (
           <button key={g} onClick={() => setGate(g)} style={{
             padding:'8px 10px', fontSize:11, fontFamily:"'JetBrains Mono',monospace", fontWeight:600,
@@ -114,7 +114,7 @@ export default function GateSimulator() {
       </svg>
 
       {/* IO controls */}
-      <div style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:16, flexWrap:'wrap', margin:'16px 0' }}>
+      <div className="io-row">
         <IOBox label="INPUT A" value={a} onClick={() => setA(x => !x)} />
         <div style={{ display:'flex', alignItems:'center', gap:6 }}>
           <span style={{ color:'var(--txt3)', fontSize:20 }}>→</span>

@@ -51,11 +51,11 @@ export default function NavOrb() {
 
   const btnStyle = (active) => ({
     display: 'flex', alignItems: 'center', justifyContent: 'center',
-    width: 34, height: 34, borderRadius: 7, border: 'none',
+    width: 30, height: 30, borderRadius: 7, border: 'none',
     background: active ? 'rgba(0,255,178,0.12)' : 'transparent',
     color: active ? 'var(--acc)' : 'var(--txt2)',
-    fontSize: 12, fontFamily: "'JetBrains Mono',monospace",
-    transition: 'all 0.2s', cursor: 'none',
+    fontSize: 11, fontFamily: "'JetBrains Mono',monospace",
+    transition: 'all 0.2s', cursor: 'pointer',
   })
 
   return (

@@ -49,12 +49,7 @@ export default function ContactClient() {
           Open to collaborations, research roles, and internship opportunities.
         </p>
 
-        <div className="fade-up-2" style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
-          gap: 24,
-          marginTop: 32,
-        }}>
+        <div className="contact-grid fade-up-2">
 
           {/* ── Form ── */}
           <div className="gc" style={{ padding: 28 }}>
