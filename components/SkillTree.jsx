@@ -2,19 +2,19 @@
 import { useState } from 'react'
 
 const NODES = [
-  { id:'kau',       icon:'🎓', year:'2022–2026', color:'#00FFB2', cx:450, cy:52,
+  { id:'kau',       icon:'🎓', year:'2023–2027', color:'#00FFB2', cx:450, cy:52,
     title:'King Abdulaziz University', sub:'B.Sc. Computer Engineering',
     desc:"Pursuing a Bachelor's in Computer Engineering. Focus: digital design, VLSI, embedded systems, algorithms.",
     skills:['Digital Logic','Embedded Systems','Algorithms','Signal Processing'] },
-  { id:'meta',      icon:'📜', year:'2023',      color:'#4285F4', cx:180, cy:210,
+  { id:'meta',      icon:'📜', year:'2026',      color:'#4285F4', cx:180, cy:210,
     title:'Meta Back-End Developer', sub:'Professional Certificate',
     desc:"Meta's Back-End Developer certificate covering Django, REST APIs, and database architecture.",
     skills:['Python','Django','REST APIs','MySQL','Linux'] },
-  { id:'google',    icon:'📜', year:'2023',      color:'#4285F4', cx:720, cy:210,
+  { id:'google',    icon:'📜', year:'2026',      color:'#4285F4', cx:720, cy:210,
     title:'Google Advanced Data Analytics', sub:'Professional Certificate',
     desc:'Advanced analytics by Google — statistical analysis, machine learning, and data storytelling.',
     skills:['Python','Pandas','ML','Tableau','R','BigQuery'] },
-  { id:'vlsi',      icon:'⚡', year:'2024',      color:'#FF6B35', cx:315, cy:350,
+  { id:'vlsi',      icon:'⚡', year:'2025',      color:'#FF6B35', cx:315, cy:350,
     title:'VLSI Design Project', sub:'CMOS ALU on 45nm',
     desc:'4-bit CMOS ALU at transistor level using Cadence Virtuoso on 45nm. Monte Carlo yield analysis.',
     skills:['Cadence Virtuoso','SPICE','CMOS','Layout','DRC/LVS'] },
