@@ -25,16 +25,31 @@ export default function ContactClient() {
 
   const set = k => e => setForm(f => ({ ...f, [k]: e.target.value }))
 
-  const submit = () => {
-    setError('')
-    if (!form.name.trim())
-      return setError('Name is required.')
-    if (!form.email.trim() || !form.email.includes('@'))
-      return setError('A valid email is required.')
-    if (form.message.trim().length < 10)
-      return setError('Message must be at least 10 characters.')
+  const submit = async () => {
+  setError('')
+  if (!form.name.trim())
+    return setError('Name is required.')
+  if (!form.email.trim() || !form.email.includes('@'))
+    return setError('A valid email is required.')
+  if (form.message.trim().length < 10)
+    return setError('Message must be at least 10 characters.')
+
+  const res = await fetch('https://formspree.io/f/mjglkrrw', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      name: form.name,
+      email: form.email,
+      message: form.message,
+    }),
+  })
+
+  if (res.ok) {
     setSent(true)
+  } else {
+    setError('Something went wrong. Please try again.')
   }
+}
 
   return (
     <Layout>
