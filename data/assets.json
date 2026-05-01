@@ -1,7 +1,9 @@
 {
   "library": [
     {
-      "id": "vlsi", "label": "VLSI & EDA", "color": "#FF6B35",
+      "id": "vlsi",
+      "label": "VLSI & EDA",
+      "color": "#FF6B35",
       "items": [
         { "name": "Cadence Virtuoso", "desc": "Industry-standard analog & custom IC design. Used for schematic, layout, and simulation.", "url": "https://cadence.com", "favicon": "https://www.cadence.com/favicon.ico", "tags": ["VLSI", "EDA", "Analog"] },
         { "name": "ngspice", "desc": "Open-source SPICE simulator. Essential for validating CMOS designs before layout.", "url": "https://ngspice.sourceforge.io", "favicon": null, "tags": ["Simulation", "SPICE"] },
@@ -10,30 +12,161 @@
       ]
     },
     {
-      "id": "data", "label": "Data & ML", "color": "#4285F4",
+      "id": "data_ml",
+      "label": "Data & ML",
+      "color": "#4285F4",
       "items": [
         { "name": "TensorFlow", "desc": "End-to-end ML platform. Used for model training, deployment, and TFLite edge inference.", "url": "https://tensorflow.org", "favicon": "https://www.tensorflow.org/favicon.ico", "tags": ["ML", "Python"] },
         { "name": "Pandas", "desc": "Python data manipulation library. Core tool for data cleaning and transformation.", "url": "https://pandas.pydata.org", "favicon": null, "tags": ["Data", "Python"] },
-        { "name": "Google BigQuery", "desc": "Serverless data warehouse for large-scale analytics. Used in Google's certificate.", "url": "https://cloud.google.com/bigquery", "favicon": null, "tags": ["SQL", "Cloud"] },
-        { "name": "scikit-learn", "desc": "ML library for Python with clean APIs for classification, regression, and clustering.", "url": "https://scikit-learn.org", "favicon": null, "tags": ["ML", "Python"] }
+        { "name": "Google BigQuery", "desc": "Serverless data warehouse for large-scale analytics.", "url": "https://cloud.google.com/bigquery", "favicon": null, "tags": ["SQL", "Cloud"] },
+        { "name": "scikit-learn", "desc": "ML library for Python with clean APIs for classification, regression, and clustering.", "url": "https://scikit-learn.org", "favicon": null, "tags": ["ML", "Python"] },
+        { "name": "Kaggle", "desc": "World's largest data science community with datasets, notebooks, and competitions.", "url": "https://kaggle.com", "favicon": "https://kaggle.com/favicon.ico", "tags": ["Datasets", "ML", "Competitions"] },
+        { "name": "Google Dataset Search", "desc": "Search engine for publicly available datasets across the web.", "url": "https://datasetsearch.research.google.com", "favicon": "https://www.google.com/favicon.ico", "tags": ["Datasets", "Research"] },
+        { "name": "OpenML", "desc": "Open platform for sharing datasets, algorithms, and experiments.", "url": "https://openml.org", "favicon": null, "tags": ["Datasets", "ML"] },
+        { "name": "Data.gov", "desc": "US government's open data portal with thousands of free datasets.", "url": "https://data.gov", "favicon": "https://data.gov/favicon.ico", "tags": ["Datasets", "Open Data"] },
+        { "name": "Seeing Theory", "desc": "Visual introduction to probability and statistics — beautiful interactive explanations.", "url": "https://seeing-theory.brown.edu", "favicon": null, "tags": ["Statistics", "Visual", "Learning"] },
+        { "name": "DataLemur", "desc": "SQL and data science interview questions used at top tech companies.", "url": "https://datalemur.com", "favicon": "https://datalemur.com/favicon.ico", "tags": ["SQL", "Interview", "Practice"] },
+        { "name": "Flourish", "desc": "No-code data visualization and storytelling tool. Build charts, maps, and stories.", "url": "https://flourish.studio", "favicon": null, "tags": ["Data Viz", "No-Code"] },
+        { "name": "CS Vistool", "desc": "Interactive visualizer for data structures and algorithms.", "url": "https://csvistool.com", "favicon": null, "tags": ["Algorithms", "Visual"] },
+        { "name": "VisuAlgo", "desc": "Visualize data structures and algorithms through animation.", "url": "https://visualgo.net/en", "favicon": null, "tags": ["Algorithms", "Visual"] },
+        { "name": "Algorithm Visualizer", "desc": "Interactive online platform to visualize algorithms from code.", "url": "https://algorithm-visualizer.org", "favicon": null, "tags": ["Algorithms", "Visual"] },
+        { "name": "AlgoAction", "desc": "Practice algorithms interactively with step-by-step visual feedback.", "url": "https://algoaction.xyz", "favicon": null, "tags": ["Algorithms", "Practice"] },
+        { "name": "Statistical Analysis Python", "desc": "GitHub tutorial covering statistical analysis using Python.", "url": "https://github.com/fonnesbeck/statistical-analysis-python-tutorial", "favicon": "https://github.com/favicon.ico", "tags": ["Python", "Statistics", "Tutorial"] },
+        { "name": "Data Science For Beginners", "desc": "Microsoft's 10-week data science curriculum with 20 lessons.", "url": "https://github.com/microsoft/Data-Science-For-Beginners", "favicon": "https://github.com/favicon.ico", "tags": ["Data Science", "Microsoft", "Beginner"] }
       ]
     },
     {
-      "id": "backend", "label": "Backend & APIs", "color": "#00FFB2",
+      "id": "backend_dev",
+      "label": "Backend & APIs",
+      "color": "#00FFB2",
       "items": [
         { "name": "FastAPI", "desc": "Modern, high-performance Python API framework with automatic OpenAPI docs.", "url": "https://fastapi.tiangolo.com", "favicon": null, "tags": ["Python", "API"] },
         { "name": "Django", "desc": "High-level Python web framework. Covered in Meta Back-End Developer certificate.", "url": "https://djangoproject.com", "favicon": null, "tags": ["Python", "Web"] },
         { "name": "Next.js", "desc": "React framework for production. Powers this portfolio.", "url": "https://nextjs.org", "favicon": null, "tags": ["React", "Full-Stack"] },
-        { "name": "Docker", "desc": "Container platform for consistent deployments across all backend projects.", "url": "https://docker.com", "favicon": null, "tags": ["DevOps", "Containers"] }
+        { "name": "Docker", "desc": "Container platform for consistent deployments across all backend projects.", "url": "https://docker.com", "favicon": null, "tags": ["DevOps", "Containers"] },
+        { "name": "API Vault", "desc": "Searchable directory of public APIs organized by category.", "url": "https://apivault.dev", "favicon": null, "tags": ["APIs", "Reference"] },
+        { "name": "DevDocs", "desc": "Fast, unified documentation for developers. Covers hundreds of frameworks.", "url": "https://devdocs.io", "favicon": "https://devdocs.io/favicon.ico", "tags": ["Docs", "Reference"] },
+        { "name": "OpenRouter", "desc": "Unified API to access dozens of LLMs including GPT-4, Claude, and Llama.", "url": "https://openrouter.ai", "favicon": null, "tags": ["LLM", "API", "AI"] },
+        { "name": "Groq Console", "desc": "Ultra-fast LLM inference API. Run Llama and Mixtral at blazing speeds for free.", "url": "https://console.groq.com", "favicon": null, "tags": ["LLM", "API", "Fast"] },
+        { "name": "Gemini API", "desc": "Google's Gemini API — multimodal AI with generous free tier.", "url": "https://ai.google.dev/gemini-api/docs", "favicon": "https://www.google.com/favicon.ico", "tags": ["AI", "API", "Google"] }
       ]
     },
     {
-      "id": "learning", "label": "Learning Resources", "color": "#A855F7",
+      "id": "frontend_ui",
+      "label": "Frontend & UI",
+      "color": "#A855F7",
       "items": [
+        { "name": "shadcn/ui", "desc": "Beautifully designed React components built with Tailwind CSS and Radix UI.", "url": "https://ui.shadcn.com/blocks", "favicon": null, "tags": ["React", "Components", "Tailwind"] },
+        { "name": "daisyUI", "desc": "Tailwind CSS component library with 50+ components and multiple themes.", "url": "https://daisyui.com", "favicon": "https://daisyui.com/favicon.ico", "tags": ["CSS", "Components", "Tailwind"] },
+        { "name": "uiverse.io", "desc": "Open-source UI elements built with pure CSS and Tailwind. Copy-paste ready.", "url": "https://uiverse.io", "favicon": null, "tags": ["CSS", "Components", "Open Source"] },
+        { "name": "Animate UI", "desc": "Animated React components built on Motion and Tailwind CSS.", "url": "https://animate-ui.com", "favicon": null, "tags": ["React", "Animation", "Components"] },
+        { "name": "React Bits", "desc": "Collection of animated React text and UI components. Split text, typewriter, and more.", "url": "https://reactbits.dev/text-animations/split-text", "favicon": null, "tags": ["React", "Animation"] },
+        { "name": "React Components", "desc": "Directory of ready-to-use React components across the ecosystem.", "url": "https://reactcomponents.com", "favicon": null, "tags": ["React", "Components"] },
+        { "name": "21st.dev", "desc": "Curated collection of modern UI components for React and Next.js.", "url": "https://21st.dev/components", "favicon": null, "tags": ["React", "Next.js", "Components"] },
+        { "name": "Blocks.so", "desc": "Pre-built UI blocks for fast landing page and app development.", "url": "https://blocks.so", "favicon": null, "tags": ["UI Blocks", "Components"] },
+        { "name": "Tailark", "desc": "Ready-made Tailwind CSS hero sections and layout blocks.", "url": "https://tailark.com", "favicon": null, "tags": ["Tailwind", "UI Blocks"] },
+        { "name": "Figcomponents", "desc": "Free Figma component libraries for fast UI design.", "url": "https://figcomponents.com", "favicon": null, "tags": ["Figma", "Design", "Free"] },
+        { "name": "GSAP", "desc": "Professional-grade JavaScript animation library. Industry standard for web animation.", "url": "https://gsap.com", "favicon": "https://gsap.com/favicon.ico", "tags": ["Animation", "JavaScript"] },
+        { "name": "Anime.js", "desc": "Lightweight JavaScript animation library with a simple but powerful API.", "url": "https://animejs.com", "favicon": null, "tags": ["Animation", "JavaScript"] },
+        { "name": "Viewport UI", "desc": "Curated collection of scroll-based and viewport-triggered UI animations.", "url": "https://viewport-ui.design", "favicon": null, "tags": ["Animation", "Scroll", "UI"] },
+        { "name": "LDRS", "desc": "Lightweight, customizable loading animation components for the web.", "url": "https://uiball.com/ldrs", "favicon": null, "tags": ["Loaders", "Animation", "Components"] },
+        { "name": "useHooks", "desc": "Collection of modern, server-safe React hooks with TypeScript support.", "url": "https://usehooks.com", "favicon": null, "tags": ["React", "Hooks", "TypeScript"] },
+        { "name": "Locator.js", "desc": "Click any UI element in the browser to jump directly to its source code.", "url": "https://www.locatorjs.com", "favicon": null, "tags": ["DevTools", "DX", "React"] },
+        { "name": "Bundle Phobia", "desc": "Check the cost of adding an npm package to your bundle before installing.", "url": "https://bundlephobia.com", "favicon": null, "tags": ["npm", "Performance", "DevTools"] },
+        { "name": "Texture Labs", "desc": "Free high-quality textures for use in web and graphic design projects.", "url": "https://texturelabs.org", "favicon": null, "tags": ["Assets", "Textures", "Design"] },
+        { "name": "Freepik", "desc": "Millions of free vectors, stock photos, PSD, and icons.", "url": "https://freepik.com", "favicon": "https://freepik.com/favicon.ico", "tags": ["Assets", "Free", "Design"] },
+        { "name": "PNG Wing", "desc": "Free PNG images with transparent backgrounds.", "url": "https://pngwing.com", "favicon": null, "tags": ["Assets", "PNG", "Free"] },
+        { "name": "Stitch by Google", "desc": "Google's AI-powered UI design tool for generating and editing interfaces.", "url": "https://stitch.withgoogle.com", "favicon": "https://www.google.com/favicon.ico", "tags": ["AI", "Design", "Google"] },
+        { "name": "LlamaCoder", "desc": "AI-powered full app generator from Together AI. Describe → get React app.", "url": "https://llamacoder.together.ai", "favicon": null, "tags": ["AI", "Code Gen", "React"] }
+      ]
+    },
+    {
+      "id": "design_inspiration",
+      "label": "Design & Inspiration",
+      "color": "#FF6B35",
+      "items": [
+        { "name": "Design Spells", "desc": "Curated collection of delightful UI design details and micro-interactions.", "url": "https://design-spells.com", "favicon": null, "tags": ["Inspiration", "UI", "Motion"] },
+        { "name": "Swissted", "desc": "Swiss-style minimalist posters for iconic music events. Great for typography inspiration.", "url": "https://swissted.com", "favicon": null, "tags": ["Typography", "Poster", "Inspiration"] },
+        { "name": "Pafolios", "desc": "Curated portfolio showcase. Find inspiration from the best designer portfolios.", "url": "https://pafolios.com", "favicon": null, "tags": ["Portfolio", "Inspiration"] },
+        { "name": "Page Flows", "desc": "Library of user flow recordings from top apps. See how real products are designed.", "url": "https://pageflows.com", "favicon": null, "tags": ["UX", "Flows", "Inspiration"] },
+        { "name": "SaaSpo", "desc": "Curated gallery of SaaS landing page designs for inspiration.", "url": "https://saaspo.com", "favicon": null, "tags": ["SaaS", "Landing Pages", "Inspiration"] },
+        { "name": "Commerce Cream", "desc": "Curated ecommerce design inspiration from the best online stores.", "url": "https://commercecream.com", "favicon": null, "tags": ["Ecommerce", "Design", "Inspiration"] },
+        { "name": "Venngage", "desc": "Infographic and report maker. Turn data into beautiful visual stories.", "url": "https://venngage.com", "favicon": "https://venngage.com/favicon.ico", "tags": ["Infographics", "Design", "Data Viz"] },
+        { "name": "Nordhealth Design", "desc": "Nordhealth's open design system — excellent reference for clean, accessible UI.", "url": "https://nordhealth.design", "favicon": null, "tags": ["Design System", "Accessibility"] },
+        { "name": "Skyscanner Design", "desc": "Skyscanner's design system and component library. Real-world scale example.", "url": "https://skyscanner.design", "favicon": null, "tags": ["Design System", "Components"] },
+        { "name": "British Library Photos", "desc": "Thousands of free historical images from the British Library on Flickr.", "url": "https://www.flickr.com/photos/britishlibrary/albums/", "favicon": null, "tags": ["Photos", "Free", "Historical"] },
+        { "name": "Visuelle", "desc": "Curated graphic design inspiration: branding, packaging, and print.", "url": "https://visuelle.co.uk", "favicon": null, "tags": ["Branding", "Graphic Design"] },
+        { "name": "Design Everywhere", "desc": "Daily design inspiration covering UI, branding, and product design.", "url": "https://designeverywhere.co", "favicon": null, "tags": ["Inspiration", "UI", "Branding"] },
+        { "name": "Lightswind", "desc": "Curated UI inspiration and design resources for modern web products.", "url": "https://www.lightswind.com", "favicon": null, "tags": ["UI", "Inspiration"] },
+        { "name": "Logo System", "desc": "Logo design inspiration and brand identity showcase.", "url": "https://logosystem.co", "favicon": null, "tags": ["Logo", "Branding", "Inspiration"] },
+        { "name": "The Index", "desc": "Curated index of the best design and creative websites on the internet.", "url": "https://theindex.website", "favicon": null, "tags": ["Curation", "Design", "Inspiration"] },
+        { "name": "Pinterest", "desc": "Visual discovery platform. Great for collecting UI, design, and project inspiration.", "url": "https://pinterest.com", "favicon": "https://pinterest.com/favicon.ico", "tags": ["Inspiration", "Visual", "Mood Board"] }
+      ]
+    },
+    {
+      "id": "learning",
+      "label": "Learning & Courses",
+      "color": "#4285F4",
+      "items": [
+        { "name": "MIT Missing Semester", "desc": "Essential CS tools: shell, vim, git, debugging. Bridges theory and practice.", "url": "https://missing.csail.mit.edu", "favicon": null, "tags": ["Tools", "Linux", "Git"] },
         { "name": "Coursera", "desc": "Platform hosting both Meta Back-End and Google Advanced Data Analytics certificates.", "url": "https://coursera.org", "favicon": null, "tags": ["Certificates", "Learning"] },
-        { "name": "Nand2Tetris", "desc": "Build a modern computer from first principles. Foundational for hardware-software interface.", "url": "https://nand2tetris.org", "favicon": null, "tags": ["Architecture", "HDL"] },
-        { "name": "MIT Missing Semester", "desc": "Essential CS tools: shell, vim, git, debugging. Bridges theory and practice.", "url": "https://missing.csail.mit.edu", "favicon": null, "tags": ["Tools", "Linux"] },
-        { "name": "3Blue1Brown", "desc": "Visual, intuitive explanations of math and ML. Essential for real understanding.", "url": "https://3blue1brown.com", "favicon": null, "tags": ["Math", "ML"] }
+        { "name": "Class Central Free Certs", "desc": "Curated list of 1000+ free online certificates from top universities and platforms.", "url": "https://www.classcentral.com/report/tag/free-certificates/", "favicon": null, "tags": ["Free", "Certificates"] },
+        { "name": "CS50 AI with Python", "desc": "Harvard's introduction to Artificial Intelligence with Python. Completely free.", "url": "https://pll.harvard.edu/course/cs50s-introduction-artificial-intelligence-python", "favicon": null, "tags": ["AI", "Python", "Harvard", "Free"] },
+        { "name": "Google Python Class", "desc": "Google's free Python course for people with a little programming experience.", "url": "https://developers.google.com/edu/python", "favicon": "https://www.google.com/favicon.ico", "tags": ["Python", "Google", "Free"] },
+        { "name": "Berkeley CS188", "desc": "UC Berkeley's Intro to AI projects — pacman, search, ML. Hands-on and rigorous.", "url": "https://inst.eecs.berkeley.edu/~cs188/fa24/projects/", "favicon": null, "tags": ["AI", "Projects", "Berkeley"] },
+        { "name": "Amazon MLU", "desc": "Amazon's Machine Learning University — free courses from actual Amazon scientists.", "url": "https://www.amazon.science/tag/machine-learning-university-mlu", "favicon": null, "tags": ["ML", "Amazon", "Free"] },
+        { "name": "AI Agents for Beginners", "desc": "Microsoft's open curriculum for building AI agents from scratch.", "url": "https://github.com/microsoft/ai-agents-for-beginners", "favicon": "https://github.com/favicon.ico", "tags": ["AI Agents", "Microsoft", "Free"] },
+        { "name": "KAUST AI Summer 2025", "desc": "KAUST Academy's Artificial Intelligence Summer 2025 course materials.", "url": "https://github.com/KAUST-Academy/KAUST-Academy-Artificial-Intelligence-Summer-2025", "favicon": "https://github.com/favicon.ico", "tags": ["AI", "KAUST", "Saudi Arabia"] },
+        { "name": "Web Dev For Beginners", "desc": "Microsoft's 24-lesson curriculum on JavaScript, CSS, and HTML fundamentals.", "url": "https://github.com/microsoft/Web-Dev-For-Beginners", "favicon": "https://github.com/favicon.ico", "tags": ["Web", "Microsoft", "Beginner"] },
+        { "name": "Free Programming Books", "desc": "Massive list of freely available programming books in dozens of languages.", "url": "https://github.com/EbookFoundation/free-programming-books", "favicon": "https://github.com/favicon.ico", "tags": ["Books", "Free", "Reference"] },
+        { "name": "Project-Based Learning", "desc": "Curated list of tutorials where you build real projects to learn programming.", "url": "https://github.com/practical-tutorials/project-based-learning", "favicon": "https://github.com/favicon.ico", "tags": ["Projects", "Tutorials", "Learning"] },
+        { "name": "Build Your Own X", "desc": "Step-by-step guides to recreate your favorite technologies from scratch.", "url": "https://github.com/codecrafters-io/build-your-own-x", "favicon": "https://github.com/favicon.ico", "tags": ["Projects", "Deep Dive"] },
+        { "name": "Roadmap.sh", "desc": "Developer roadmaps for frontend, backend, DevOps, AI, and more.", "url": "https://roadmap.sh", "favicon": "https://roadmap.sh/favicon.ico", "tags": ["Career", "Roadmap", "Learning"] },
+        { "name": "Oracle IaaS Learning", "desc": "Oracle's free cloud infrastructure training and certification path.", "url": "https://education.oracle.com/learn/iaas/ppillar_640", "favicon": null, "tags": ["Cloud", "Oracle", "Free"] }
+      ]
+    },
+    {
+      "id": "coding_practice",
+      "label": "Coding Practice & Interviews",
+      "color": "#00FFB2",
+      "items": [
+        { "name": "LeetCode Patterns", "desc": "Sean Prasad's pattern-based LeetCode question tracker. Essential for interview prep.", "url": "https://seanprashad.com/leetcode-patterns/", "favicon": null, "tags": ["LeetCode", "Interview", "Patterns"] },
+        { "name": "LeetCode Company-Wise", "desc": "LeetCode questions organized by company — Google, Meta, Amazon, and more.", "url": "https://github.com/krishnadey30/LeetCode-Questions-CompanyWise", "favicon": "https://github.com/favicon.ico", "tags": ["LeetCode", "Interview", "Companies"] },
+        { "name": "Awesome LeetCode Resources", "desc": "Curated list of the best LeetCode study guides, tips, and solutions.", "url": "https://github.com/ashishps1/awesome-leetcode-resources", "favicon": "https://github.com/favicon.ico", "tags": ["LeetCode", "Interview"] },
+        { "name": "Coding Interview University", "desc": "John Washam's complete study plan for getting a job at a top tech company.", "url": "https://github.com/jwasham/coding-interview-university", "favicon": "https://github.com/favicon.ico", "tags": ["Interview", "Study Plan", "Comprehensive"] },
+        { "name": "Codewars", "desc": "Sharpen your coding skills with challenges called kata, ranked by difficulty.", "url": "https://www.codewars.com", "favicon": "https://www.codewars.com/favicon.ico", "tags": ["Practice", "Challenges", "Kata"] },
+        { "name": "Learn Git Branching", "desc": "The most visual and interactive way to learn Git branching. Highly recommended.", "url": "https://learngitbranching.js.org", "favicon": null, "tags": ["Git", "Interactive", "Visual"] },
+        { "name": "2026 AI College Jobs", "desc": "Curated list of AI and ML internships and new grad roles for 2026.", "url": "https://github.com/speedyapply/2026-AI-College-Jobs", "favicon": "https://github.com/favicon.ico", "tags": ["Jobs", "AI", "Internship"] },
+        { "name": "2025 SWE College Jobs", "desc": "Software engineering new grad and internship positions for 2025.", "url": "https://github.com/speedyapply/2025-SWE-College-Jobs", "favicon": "https://github.com/favicon.ico", "tags": ["Jobs", "SWE", "Internship"] },
+        { "name": "Hiring Cafe", "desc": "Real-time job board aggregating thousands of tech jobs from company career pages.", "url": "https://hiring.cafe", "favicon": null, "tags": ["Jobs", "Tech", "Hiring"] },
+        { "name": "Cheatography", "desc": "Thousands of community-made cheat sheets for programming, math, and more.", "url": "https://cheatography.com", "favicon": "https://cheatography.com/favicon.ico", "tags": ["Cheat Sheets", "Reference"] },
+        { "name": "QuickRef.me", "desc": "Quick reference cheat sheets for developers — Git, Linux, Python, and more.", "url": "https://quickref.me", "favicon": null, "tags": ["Cheat Sheets", "Reference"] },
+        { "name": "DS Cheatsheets", "desc": "Data science cheat sheets for Python, ML, stats, and visualization tools.", "url": "https://github.com/FavioVazquez/ds-cheatsheets", "favicon": "https://github.com/favicon.ico", "tags": ["Data Science", "Cheat Sheets"] },
+        { "name": "Murdle", "desc": "Daily logic puzzle mystery game. Great for sharpening deductive reasoning.", "url": "https://murdle.com", "favicon": null, "tags": ["Logic", "Puzzle", "Fun"] }
+      ]
+    },
+    {
+      "id": "tools_productivity",
+      "label": "Tools & Productivity",
+      "color": "#A855F7",
+      "items": [
+        { "name": "Free-for.dev", "desc": "Massive list of free tiers for SaaS, PaaS, IaaS, and developer tools.", "url": "https://free-for.dev", "favicon": null, "tags": ["Free Tier", "Tools", "Developer"] },
+        { "name": "Vercel", "desc": "Frontend cloud platform. Deploy Next.js apps in seconds with zero configuration.", "url": "https://vercel.com", "favicon": "https://vercel.com/favicon.ico", "tags": ["Deployment", "Hosting", "Free"] },
+        { "name": "Netlify", "desc": "Web hosting and CI/CD platform for frontend projects. Generous free tier.", "url": "https://www.netlify.com", "favicon": "https://www.netlify.com/favicon.ico", "tags": ["Deployment", "Hosting", "Free"] },
+        { "name": "InfinityFree", "desc": "Completely free web hosting with unlimited disk space and bandwidth.", "url": "https://www.infinityfree.com", "favicon": null, "tags": ["Hosting", "Free"] },
+        { "name": "Meta Back-End GitHub", "desc": "Community solutions and resources for Meta's Back-End Developer certificate.", "url": "https://github.com/YoonHCho/Meta-Back-End-Developer", "favicon": "https://github.com/favicon.ico", "tags": ["Meta", "Certificate", "Python"] },
+        { "name": "Coursera Data Science", "desc": "Community notes and solutions for Coursera's Data Science Specialization.", "url": "https://github.com/ElisaRMA/Coursera-Data-Science-Specialization", "favicon": "https://github.com/favicon.ico", "tags": ["Data Science", "Coursera"] },
+        { "name": "Awesome LLM Apps", "desc": "Curated collection of production-ready LLM-powered applications and agents.", "url": "https://github.com/Shubhamsaboo/awesome-llm-apps", "favicon": "https://github.com/favicon.ico", "tags": ["LLM", "AI Apps", "Open Source"] },
+        { "name": "Best Websites for Programmers", "desc": "Comprehensive list of websites every programmer should know about.", "url": "https://github.com/taduyde/Best-websites-a-programmer-should-visit", "favicon": "https://github.com/favicon.ico", "tags": ["Reference", "Resources"] },
+        { "name": "Project Ideas & Resources", "desc": "Collection of project ideas with resources to help you build them.", "url": "https://github.com/The-Cool-Coders/Project-Ideas-And-Resources", "favicon": "https://github.com/favicon.ico", "tags": ["Projects", "Ideas"] },
+        { "name": "n8n Workflows", "desc": "Collection of n8n automation workflows for common tasks and integrations.", "url": "https://github.com/Zie619/n8n-workflows", "favicon": "https://github.com/favicon.ico", "tags": ["Automation", "n8n", "Workflows"] },
+        { "name": "Orchids App", "desc": "AI-powered website builder that clones and generates production sites.", "url": "https://www.orchids.app", "favicon": null, "tags": ["AI", "No-Code", "Builder"] },
+        { "name": "Base44", "desc": "AI app builder — describe your app and get a working product instantly.", "url": "https://base44.com", "favicon": null, "tags": ["AI", "No-Code", "Builder"] },
+        { "name": "Emergent.sh", "desc": "AI agent platform for building and deploying autonomous software agents.", "url": "https://app.emergent.sh", "favicon": null, "tags": ["AI Agents", "Platform"] },
+        { "name": "ChatEdu", "desc": "AI-powered learning platform. Upload course materials and chat with them.", "url": "https://chatedu.io", "favicon": null, "tags": ["AI", "Learning", "Study"] },
+        { "name": "Resource Boy", "desc": "Curated design and developer resources updated regularly.", "url": "https://resourceboy.com", "favicon": null, "tags": ["Resources", "Design", "Dev"] },
+        { "name": "Code With Random", "desc": "Frontend projects, UI components, and web development tutorials.", "url": "https://www.codewithrandom.com", "favicon": null, "tags": ["Frontend", "Projects", "Tutorials"] },
+        { "name": "Storytribe", "desc": "Creative writing and storytelling community platform.", "url": "https://storytribeapp.com", "favicon": null, "tags": ["Writing", "Creative"] }
       ]
     }
   ]
