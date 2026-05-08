@@ -31,7 +31,6 @@ Built by a Computer Engineering student at **King Abdulaziz University** special
 | 🖱️ **Custom Cursor** | SVG cursor with lagging ring trail on desktop |
 | 📱 **Fully Responsive** | Mobile-first layout that works on all screen sizes |
 | ✉️ **Contact Form** | Real email delivery via Formspree |
-| 🚀 **Auto Deploy** | Every push to `main` triggers an automatic Vercel redeploy |
 
 ---
 
