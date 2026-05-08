@@ -50,3 +50,26 @@ Built by a Computer Engineering student at **King Abdulaziz University** special
 ---
 
 ## Project Structure
+
+├── app/
+│   ├── page.js                  # Homepage — Bento grid layout
+│   ├── skilltree/               # Interactive SVG skill tree
+│   ├── experience/              # Tabbed experience page
+│   ├── projects/                # Projects showcase
+│   ├── library/                 # Digital resource library
+│   ├── playground/              # Logic gate + Git simulators
+│   └── contact/                 # Contact form with Formspree
+├── components/
+│   ├── Layout.jsx               # Global layout wrapper
+│   ├── NavOrb.jsx               # Floating nav orb + command palette
+│   ├── ThemeProvider.jsx        # Theme context with localStorage persistence
+│   ├── Cursor.jsx               # Custom cursor with trail
+│   ├── SkillTree.jsx            # SVG skill tree component
+│   ├── GateSimulator.jsx        # Logic gate simulator
+│   └── GitSimulator.jsx         # Git command simulator
+├── data/
+│   ├── content.json             # Profile, projects, skill tree, stats
+│   ├── assets.json              # Digital library categories and links
+│   └── experience.json          # Internships, volunteer, research
+└── styles/
+└── globals.css              # CSS variables, themes, responsive grid
