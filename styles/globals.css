@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
-/* ── Cyber-Dark Theme (default) ───────────────────────────── */
+/* ── Cyber-Dark Theme ─────────────────────────────────────── */
 :root {
   --bg:       #070709;
   --bg2:      #0d0d12;
@@ -51,7 +51,6 @@ html[data-theme="paper"] {
 /* ── Reset ────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
-
 body {
   background: var(--bg);
   color: var(--txt);
@@ -60,8 +59,6 @@ body {
   overflow-x: hidden;
   transition: background 0.4s ease, color 0.4s ease;
 }
-
-/* Noise overlay */
 body::before {
   content: '';
   position: fixed;
@@ -72,16 +69,11 @@ body::before {
   z-index: 9999;
   transition: opacity 0.4s ease;
 }
-
-/* Hide custom cursor on touch devices */
-@media (pointer: fine) {
-  * { cursor: none !important; }
-}
+@media (pointer: fine) { * { cursor: none !important; } }
 
 /* ── Typography ───────────────────────────────────────────── */
 .font-display { font-family: 'Syne', sans-serif; font-weight: 800; letter-spacing: -0.03em; }
 .font-mono    { font-family: 'JetBrains Mono', monospace; }
-.font-body    { font-family: 'Space Mono', monospace; }
 
 /* ── Glass Card ───────────────────────────────────────────── */
 .gc {
@@ -108,14 +100,10 @@ body::before {
   color: var(--acc);
 }
 
-/* ── Glitch hover ─────────────────────────────────────────── */
+/* ── Glitch ───────────────────────────────────────────────── */
 .glitch { position: relative; }
 .glitch:hover::before,
-.glitch:hover::after {
-  content: attr(data-text);
-  position: absolute;
-  inset: 0;
-}
+.glitch:hover::after { content: attr(data-text); position: absolute; inset: 0; }
 .glitch:hover::before { animation: g1 0.3s linear; color: var(--acc2); z-index: -1; }
 .glitch:hover::after  { animation: g2 0.3s linear; color: var(--acc3); z-index: -2; }
 @keyframes g1 {
@@ -129,7 +117,7 @@ body::before {
   100%{ clip-path: inset(30% 0 55% 0); transform: translate(0); }
 }
 
-/* ── Fade in up ───────────────────────────────────────────── */
+/* ── Fade up ──────────────────────────────────────────────── */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -141,23 +129,11 @@ body::before {
 .fade-up-4 { animation: fadeUp 0.6s 0.4s ease both; }
 .fade-up-5 { animation: fadeUp 0.6s 0.5s ease both; }
 
-/* ── SVG Skill Tree ───────────────────────────────────────── */
-.edge {
-  stroke-dasharray: 8 4;
-  animation: dash 3s linear infinite;
-  fill: none;
-  stroke-width: 1.5;
-}
+/* ── SVG edges & nodes ────────────────────────────────────── */
+.edge { stroke-dasharray: 8 4; animation: dash 3s linear infinite; fill: none; stroke-width: 1.5; }
 @keyframes dash { to { stroke-dashoffset: -36; } }
-.node-ring {
-  fill: none;
-  stroke-width: 1.5;
-  animation: ring-pulse 2.2s ease-out infinite;
-}
-@keyframes ring-pulse {
-  0%   { r: 18; opacity: 0.8; }
-  100% { r: 34; opacity: 0; }
-}
+.node-ring { fill: none; stroke-width: 1.5; animation: ring-pulse 2.2s ease-out infinite; }
+@keyframes ring-pulse { 0% { r: 18; opacity: 0.8; } 100% { r: 34; opacity: 0; } }
 
 /* ── Nav Orb ──────────────────────────────────────────────── */
 .nav-orb {
@@ -180,76 +156,65 @@ body::before {
   max-width: calc(100vw - 24px);
   overflow-x: auto;
 }
-.nav-orb:hover {
-  box-shadow: var(--shad), var(--glow2);
-  border-color: var(--bdr-h);
-}
+.nav-orb:hover { box-shadow: var(--shad), var(--glow2); border-color: var(--bdr-h); }
 
-/* ── Responsive page wrapper ──────────────────────────────── */
+/* ── Page wrapper — WIDE ──────────────────────────────────── */
 .page-wrap {
-  max-width: 1100px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 60px 16px 60px;
+  padding: 64px 48px 100px;
 }
-@media (min-width: 640px) {
-  .page-wrap { padding: 72px 24px 60px; }
-}
+@media (max-width: 1024px) { .page-wrap { padding: 56px 32px 100px; } }
+@media (max-width: 640px)  { .page-wrap { padding: 44px 16px 100px; } }
 
-/* ── Bento grid ───────────────────────────────────────────── */
+/* ── Grids ────────────────────────────────────────────────── */
 .bento {
   display: grid;
   grid-template-columns: 1fr;
   gap: 12px;
 }
-@media (min-width: 640px) {
-  .bento { grid-template-columns: repeat(2, 1fr); }
-}
-@media (min-width: 900px) {
-  .bento { grid-template-columns: repeat(3, 1fr); }
-}
-.bento-wide {
-  grid-column: 1 / -1;
-}
-@media (min-width: 900px) {
-  .bento-wide-desk { grid-column: span 2; }
-}
+@media (min-width: 640px)  { .bento { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1000px) { .bento { grid-template-columns: repeat(3, 1fr); } }
+.bento-wide { grid-column: 1 / -1; }
 
-/* ── Projects grid ────────────────────────────────────────── */
 .proj-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 16px;
   margin-top: 32px;
 }
-@media (min-width: 640px) {
-  .proj-grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media (min-width: 900px) {
-  .proj-grid { grid-template-columns: repeat(3, 1fr); }
-}
+@media (min-width: 640px)  { .proj-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1000px) { .proj-grid { grid-template-columns: repeat(3, 1fr); } }
 
-/* ── Library grid ─────────────────────────────────────────── */
 .lib-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
 }
-@media (min-width: 640px) {
-  .lib-grid { grid-template-columns: repeat(2, 1fr); }
-}
+@media (min-width: 640px)  { .lib-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1100px) { .lib-grid { grid-template-columns: repeat(3, 1fr); } }
 
-/* ── Contact grid ─────────────────────────────────────────── */
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
   margin-top: 32px;
 }
-@media (min-width: 720px) {
-  .contact-grid { grid-template-columns: 1fr 1fr; }
+@media (min-width: 720px) { .contact-grid { grid-template-columns: 1fr 1fr; } }
+
+/* ── Playground — side by side on desktop ─────────────────── */
+.playground-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-top: 32px;
+  align-items: start;
+}
+@media (min-width: 1000px) {
+  .playground-grid { grid-template-columns: 1fr 1fr; }
 }
 
-/* ── Gate sim IO row ──────────────────────────────────────── */
+/* ── Gate sim ─────────────────────────────────────────────── */
 .io-row {
   display: flex;
   align-items: center;
@@ -258,45 +223,31 @@ body::before {
   flex-wrap: wrap;
   margin: 16px 0;
 }
-
-/* ── Gate selector ────────────────────────────────────────── */
 .gate-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 8px;
   margin-bottom: 20px;
 }
-@media (max-width: 400px) {
-  .gate-grid { grid-template-columns: repeat(2, 1fr); }
-}
+@media (max-width: 400px) { .gate-grid { grid-template-columns: repeat(2, 1fr); } }
 
-/* ── Skill tree SVG wrapper ───────────────────────────────── */
-.tree-svg-wrap {
-  width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
-.tree-svg-wrap svg {
-  min-width: 500px;
-  width: 100%;
-  height: auto;
-}
+/* ── Skill tree ───────────────────────────────────────────── */
+.tree-svg-wrap { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.tree-svg-wrap svg { min-width: 500px; width: 100%; height: auto; }
 
-/* ── Hero heading ─────────────────────────────────────────── */
+/* ── Hero & Page headings ─────────────────────────────────── */
 .hero-h1 {
   font-family: 'Syne', sans-serif;
   font-weight: 800;
-  font-size: clamp(2.4rem, 10vw, 6.5rem);
+  font-size: clamp(3rem, 9vw, 9rem);
   color: var(--txt);
-  line-height: 0.92;
+  line-height: 0.9;
   letter-spacing: -0.04em;
 }
-
-/* ── Page heading ─────────────────────────────────────────── */
 .page-h1 {
   font-family: 'Syne', sans-serif;
   font-weight: 800;
-  font-size: clamp(2rem, 6vw, 3.8rem);
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
   color: var(--txt);
   letter-spacing: -0.03em;
 }
@@ -319,7 +270,7 @@ body::before {
   animation: pulse-dot 2s infinite;
 }
 
-/* ── Gate wire SVG ────────────────────────────────────────── */
+/* ── Gate wires ───────────────────────────────────────────── */
 .gw { stroke-width: 2; fill: none; transition: stroke 0.25s, filter 0.25s; }
 .gw.lo { stroke: #333340; }
 .gw.hi { stroke: #00FFB2; filter: drop-shadow(0 0 4px #00FFB2); }
@@ -327,18 +278,6 @@ body::before {
 .gd.lo { fill: #333340; }
 .gd.hi { fill: #00FFB2; filter: drop-shadow(0 0 6px #00FFB2); }
 
-/* ── Chips row ────────────────────────────────────────────── */
-.chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 14px;
-}
-
-/* ── CTA row ──────────────────────────────────────────────── */
-.ctas {
-  display: flex;
-  gap: 12px;
-  margin-top: 28px;
-  flex-wrap: wrap;
-}
+/* ── Misc ─────────────────────────────────────────────────── */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.ctas  { display: flex; gap: 12px; margin-top: 28px; flex-wrap: wrap; }
