@@ -1,0 +1,44 @@
+{
+  "internships": [
+    {
+      "id": "i1",
+      "title": "Job Title",
+      "company": "Company Name",
+      "location": "Jeddah, Saudi Arabia",
+      "type": "Internship",
+      "start": "Jun 2024",
+      "end": "Aug 2024",
+      "status": "completed",
+      "description": "Describe what you did, what you built, and what you learned during this internship.",
+      "skills": ["Python", "SQL", "Docker"]
+    }
+  ],
+  "volunteer": [
+    {
+      "id": "v1",
+      "title": "Role / Position",
+      "company": "Organization Name",
+      "location": "Jeddah, Saudi Arabia",
+      "type": "Volunteer",
+      "start": "Jan 2023",
+      "end": "Present",
+      "status": "active",
+      "description": "Describe your volunteer role, responsibilities, and impact.",
+      "skills": ["Leadership", "Communication", "Teamwork"]
+    }
+  ],
+  "research": [
+    {
+      "id": "r1",
+      "title": "Research Project Title",
+      "company": "King Abdulaziz University",
+      "location": "Jeddah, Saudi Arabia",
+      "type": "Research",
+      "start": "Sep 2023",
+      "end": "Present",
+      "status": "active",
+      "description": "Describe your research topic, methodology, findings, and supervisor if applicable.",
+      "skills": ["VLSI", "MATLAB", "Research Writing"]
+    }
+  ]
+}

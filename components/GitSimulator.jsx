@@ -1,6 +1,6 @@
 'use client'
 import { useState, useRef, useEffect } from 'react'
- 
+
 // ── Git simulation state ───────────────────────────────────────────
 const INITIAL_STATE = {
   branch: 'main',
@@ -15,7 +15,7 @@ const INITIAL_STATE = {
   remoteBranches: ['main'],
   lastPushed: 'a1b2c3d',
 }
- 
+
 // ── Lessons / challenges ───────────────────────────────────────────
 const LESSONS = [
   {
@@ -67,7 +67,7 @@ const LESSONS = [
     successMsg: 'Pushed to remote! Your changes are now on GitHub.',
   },
 ]
- 
+
 // ── Command parser & executor ──────────────────────────────────────
 function executeCommand(input, state, setState, addOutput, currentLesson, prevState) {
   const parts = input.trim().split(/\s+/)
@@ -75,11 +75,11 @@ function executeCommand(input, state, setState, addOutput, currentLesson, prevSt
     addOutput(`command not found: ${parts[0]}. Type 'help' for available commands.`, 'error')
     return state
   }
- 
+
   if (parts[0] === 'clear') {
     return '__clear__'
   }
- 
+
   if (parts[0] === 'help') {
     addOutput(`Available commands:
   git status          — show working tree status
@@ -102,7 +102,7 @@ function executeCommand(input, state, setState, addOutput, currentLesson, prevSt
   help                — show this help`, 'info')
     return state
   }
- 
+
   if (parts[0] === 'lesson') {
     if (currentLesson) {
       addOutput(`Challenge ${currentLesson.id}: ${currentLesson.title}\n${currentLesson.desc}\nHint: ${currentLesson.hint}`, 'info')
@@ -111,10 +111,10 @@ function executeCommand(input, state, setState, addOutput, currentLesson, prevSt
     }
     return state
   }
- 
+
   const cmd = parts[1]
   let newState = { ...state }
- 
+
   switch (cmd) {
     case 'status': {
       const staged   = state.stagedFiles.length   > 0 ? `\nChanges to be committed:\n${state.stagedFiles.map(f => `  \x1b[32mnew file: ${f}\x1b[0m`).join('\n')}` : ''
@@ -126,7 +126,7 @@ function executeCommand(input, state, setState, addOutput, currentLesson, prevSt
       )
       break
     }
- 
+
     case 'add': {
       const target = parts[2]
       if (!target) { addOutput('Usage: git add <file> or git add .', 'error'); break }
@@ -145,7 +145,7 @@ function executeCommand(input, state, setState, addOutput, currentLesson, prevSt
       }
       break
     }
- 
+
     case 'commit': {
       if (parts[2] !== '-m') { addOutput('Usage: git commit -m "your message"', 'error'); break }
       const msg = parts.slice(3).join(' ').replace(/^["']|["']$/g, '')
@@ -157,7 +157,7 @@ function executeCommand(input, state, setState, addOutput, currentLesson, prevSt
       addOutput(`[${state.branch} ${hash}] ${msg}\n${state.stagedFiles.length} file(s) changed`, 'success')
       break
     }
- 
+
     case 'log': {
       const logs = [...state.commits].reverse().map(
         (c, i) => `${i === 0 ? 'commit ' : 'commit '}${c.hash}${i === 0 ? ' (HEAD -> ' + state.branch + ')' : ''}\n  ${c.message}`
@@ -165,7 +165,7 @@ function executeCommand(input, state, setState, addOutput, currentLesson, prevSt
       addOutput(logs || 'No commits yet.', 'output')
       break
     }
- 
+
     case 'branch': {
       const name = parts[2]
       if (!name) {
@@ -179,7 +179,7 @@ function executeCommand(input, state, setState, addOutput, currentLesson, prevSt
       }
       break
     }
- 
+
     case 'checkout': {
       if (parts[2] === '-b') {
         const name = parts[3]
@@ -197,7 +197,7 @@ function executeCommand(input, state, setState, addOutput, currentLesson, prevSt
       }
       break
     }
- 
+
     case 'push': {
       const remote = parts[2]
       const branch = parts[3] || state.branch
@@ -209,12 +209,12 @@ function executeCommand(input, state, setState, addOutput, currentLesson, prevSt
       addOutput(`Branch '${branch}' pushed to origin.\nTo https://github.com/yourrepo.git\n  ${state.lastPushed}..${latest?.hash || state.lastPushed}  ${branch} -> ${branch}`, 'success')
       break
     }
- 
+
     case 'pull': {
       addOutput(`Already up to date.\nFrom https://github.com/yourrepo.git\n* branch ${state.branch} -> FETCH_HEAD`, 'output')
       break
     }
- 
+
     case 'stash': {
       if (parts[2] === 'pop') {
         if (state.stash.length === 0) { addOutput('No stash entries found.', 'error'); break }
@@ -233,7 +233,7 @@ function executeCommand(input, state, setState, addOutput, currentLesson, prevSt
       }
       break
     }
- 
+
     case 'diff': {
       if (state.unstagedFiles.length === 0) {
         addOutput('No changes to show.', 'output')
@@ -242,7 +242,7 @@ function executeCommand(input, state, setState, addOutput, currentLesson, prevSt
       }
       break
     }
- 
+
     case 'reset': {
       if (parts[2] === 'HEAD') {
         const file = parts[3]
@@ -256,7 +256,7 @@ function executeCommand(input, state, setState, addOutput, currentLesson, prevSt
       }
       break
     }
- 
+
     case 'merge': {
       const target = parts[2]
       if (!target) { addOutput('Usage: git merge <branch>', 'error'); break }
@@ -265,14 +265,14 @@ function executeCommand(input, state, setState, addOutput, currentLesson, prevSt
       addOutput(`Merging '${target}' into '${state.branch}'...\nFast-forward\nAlready up to date.`, 'success')
       break
     }
- 
+
     default:
       addOutput(`git: '${cmd}' is not a git command. Type 'help' to see available commands.`, 'error')
   }
- 
+
   return newState
 }
- 
+
 // ── Main component ─────────────────────────────────────────────────
 export default function GitSimulator() {
   const [gitState, setGitState]       = useState(INITIAL_STATE)
@@ -285,47 +285,47 @@ export default function GitSimulator() {
   const [showCongrats, setShowCongrats] = useState(false)
   const terminalRef = useRef(null)
   const inputRef    = useRef(null)
- 
+
   const currentLesson = lessonIdx < LESSONS.length ? LESSONS[lessonIdx] : null
   const prevStateRef  = useRef(gitState)
- 
+
   // Auto-scroll terminal
   useEffect(() => {
     if (terminalRef.current)
       terminalRef.current.scrollTop = terminalRef.current.scrollHeight
   }, [history])
- 
+
   // Focus input on click anywhere in terminal
   const focusInput = () => inputRef.current?.focus()
- 
+
   const addOutput = (text, type = 'output') => {
     setHistory(h => [...h, { text, type, id: Date.now() + Math.random() }])
   }
- 
+
   const handleSubmit = (e) => {
     e.preventDefault()
     const cmd = input.trim()
     if (!cmd) return
- 
+
     // Echo the command
     setHistory(h => [...h, { text: `${gitState.branch} $ ${cmd}`, type: 'cmd', id: Date.now() }])
     setCmdHistory(h => [cmd, ...h])
     setHistoryIdx(-1)
     setInput('')
- 
+
     // Execute
     const prev = { ...gitState }
     const result = executeCommand(cmd, gitState, setGitState, addOutput, currentLesson, prev)
- 
+
     if (result === '__clear__') {
       setHistory([])
       return
     }
- 
+
     if (result && result !== gitState) {
       setGitState(result)
       prevStateRef.current = prev
- 
+
       // Check lesson completion
       if (currentLesson && currentLesson.check(result, prev)) {
         setTimeout(() => {
@@ -347,7 +347,7 @@ export default function GitSimulator() {
       }
     }
   }
- 
+
   const handleKeyDown = (e) => {
     if (e.key === 'ArrowUp') {
       e.preventDefault()
@@ -362,7 +362,7 @@ export default function GitSimulator() {
       setInput(idx === -1 ? '' : cmdHistory[idx])
     }
   }
- 
+
   // Color map for output types
   const typeColor = {
     cmd:     '#00FFB2',
@@ -373,10 +373,10 @@ export default function GitSimulator() {
     info:    '#4285F4',
     lesson:  '#A855F7',
   }
- 
+
   return (
     <div style={{ width: '100%', maxWidth: 720 }}>
- 
+
       {/* Progress bar */}
       <div style={{ marginBottom: 16 }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 }}>
@@ -399,7 +399,7 @@ export default function GitSimulator() {
           ))}
         </div>
       </div>
- 
+
       {/* Current challenge card */}
       {currentLesson && !showCongrats && (
         <div style={{
@@ -422,7 +422,7 @@ export default function GitSimulator() {
           </div>
         </div>
       )}
- 
+
       {showCongrats && (
         <div style={{
           padding: '20px', marginBottom: 12, textAlign: 'center',
@@ -442,7 +442,7 @@ export default function GitSimulator() {
           </button>
         </div>
       )}
- 
+
       {/* Terminal */}
       <div onClick={focusInput} style={{
         background: '#0a0a0f',
@@ -469,7 +469,7 @@ export default function GitSimulator() {
             )}
           </div>
         </div>
- 
+
         {/* Output area */}
         <div ref={terminalRef} style={{
           height: 320, overflowY: 'auto',
@@ -489,7 +489,7 @@ export default function GitSimulator() {
               <div style={{ borderTop: '1px solid #1e1e2a', marginTop: 10, paddingTop: 4 }} />
             </div>
           )}
- 
+
           {history.map(line => (
             <div key={line.id} style={{
               color: typeColor[line.type] || '#8A8A9A',
@@ -500,7 +500,7 @@ export default function GitSimulator() {
               {line.text}
             </div>
           ))}
- 
+
           {/* Input line */}
           <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginTop: 4 }}>
             <span style={{ color: '#00FFB2', whiteSpace: 'nowrap', fontWeight: 600 }}>
@@ -527,7 +527,7 @@ export default function GitSimulator() {
           </div>
         </div>
       </div>
- 
+
       {/* Quick reference */}
       <div style={{ marginTop: 12, display: 'flex', flexWrap: 'wrap', gap: 6 }}>
         {['git status','git add .','git commit -m "msg"','git log','git branch','git push origin main'].map(cmd => (
@@ -546,7 +546,7 @@ export default function GitSimulator() {
           </button>
         ))}
       </div>
- 
+
     </div>
   )
 }

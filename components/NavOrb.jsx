@@ -5,12 +5,13 @@ import { usePathname } from 'next/navigation'
 import { useTheme } from './ThemeProvider'
 
 const NAV = [
-  { label: 'Home',       href: '/',           short: 'H' },
-  { label: 'Skill Tree', href: '/skilltree',   short: 'T' },
-  { label: 'Projects',   href: '/projects',    short: 'P' },
-  { label: 'Library',    href: '/library',     short: 'L' },
-  { label: 'Playground', href: '/playground',  short: '⚙' },
-  { label: 'Contact',    href: '/contact',     short: '✉' },
+  { label: 'Home',       href: '/',            short: 'H' },
+  { label: 'Skill Tree', href: '/skilltree',    short: 'T' },
+  { label: 'Experience', href: '/experience',   short: 'E' },
+  { label: 'Projects',   href: '/projects',     short: 'P' },
+  { label: 'Library',    href: '/library',      short: 'L' },
+  { label: 'Playground', href: '/playground',   short: '⚙' },
+  { label: 'Contact',    href: '/contact',      short: '✉' },
 ]
 
 function Tooltip({ label, children }) {
@@ -82,7 +83,7 @@ export default function NavOrb() {
           fontSize: 10, color: 'var(--txt3)',
           fontFamily: "'JetBrains Mono',monospace",
           border: '1px solid var(--bdr)', padding: '2px 6px',
-          borderRadius: 5, background: 'transparent', cursor: 'none',
+          borderRadius: 5, background: 'transparent', cursor: 'pointer',
           transition: 'all 0.2s',
         }}>⌘K</button>
       </nav>
