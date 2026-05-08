@@ -19,57 +19,59 @@ Built by a Computer Engineering student at **King Abdulaziz University** special
 ## Features
 
 | Feature | Description |
-|---|---|
-| 🌗 **Dual Theme** | Cyber-Dark and Minimal-Paper themes with system preference detection and persistence across pages via `localStorage` |
-| 🌳 **Interactive Skill Tree** | SVG-based node map with animated edges representing academic and project milestones. Click any node for details |
+| --- | --- |
+| 🌗 **Dual Theme** | Cyber-Dark and Minimal-Paper themes with system preference detection and persistence via `localStorage` |
+| 🌳 **Interactive Skill Tree** | SVG node map with animated edges representing academic and project milestones |
 | 💼 **Experience Page** | Tabbed layout for Internships, Volunteer Work, and Research Projects |
-| 📂 **Projects Page** | Card-based project showcase with tags, status badges, and GitHub/demo links |
-| 📚 **Digital Library** | Categorized grid of 100+ curated developer resources, tools, and learning materials |
-| ⚡ **Logic Gate Simulator** | Real-time interactive CMOS gate simulation — AND, OR, NAND, NOR, XOR, XNOR, NOT, BUFFER |
+| 📂 **Projects Page** | Card-based showcase with tags, status badges, and GitHub/demo links |
+| 📚 **Digital Library** | Categorized grid of 100+ curated developer resources and tools |
+| ⚡ **Logic Gate Simulator** | Real-time CMOS gate simulation — AND, OR, NAND, NOR, XOR, XNOR, NOT, BUFFER |
 | 🖥️ **Git Command Simulator** | Interactive terminal with 6 guided challenges teaching real Git workflows |
-| ⌨️ **Command Palette** | `Cmd+K` / `Ctrl+K` keyboard-driven navigation across all pages |
-| 🖱️ **Custom Cursor** | SVG cursor with a lagging ring trail effect on desktop |
-| 📱 **Fully Responsive** | Mobile-first layout — works on all screen sizes |
+| ⌨️ **Command Palette** | `Cmd+K` keyboard-driven navigation across all pages |
+| 🖱️ **Custom Cursor** | SVG cursor with lagging ring trail on desktop |
+| 📱 **Fully Responsive** | Mobile-first layout that works on all screen sizes |
 | ✉️ **Contact Form** | Real email delivery via Formspree |
-| 🚀 **Auto Deploy** | Every `git push` to `main` triggers an automatic Vercel redeploy |
+| 🚀 **Auto Deploy** | Every push to `main` triggers an automatic Vercel redeploy |
 
 ---
 
 ## Tech Stack
 
 | Layer | Technology |
-|---|---|
+| --- | --- |
 | **Framework** | Next.js 14 (App Router) |
 | **Language** | JavaScript / JSX |
-| **Styling** | Pure CSS with CSS Custom Properties (no Tailwind, no CSS-in-JS library) |
+| **Styling** | Pure CSS with CSS Custom Properties |
 | **Fonts** | Syne · Space Mono · JetBrains Mono |
-| **Deployment** | Vercel (free tier) |
+| **Deployment** | Vercel |
 | **Email** | Formspree |
-| **Content** | JSON files (`data/content.json`, `data/assets.json`, `data/experience.json`) |
+| **Content** | JSON files — content.json, assets.json, experience.json |
 
 ---
 
 ## Project Structure
 
+```text
 ├── app/
-│   ├── page.js                  # Homepage — Bento grid layout
-│   ├── skilltree/               # Interactive SVG skill tree
-│   ├── experience/              # Tabbed experience page
-│   ├── projects/                # Projects showcase
-│   ├── library/                 # Digital resource library
-│   ├── playground/              # Logic gate + Git simulators
-│   └── contact/                 # Contact form with Formspree
+│   ├── page.js               Homepage — Bento grid layout
+│   ├── skilltree/            Interactive SVG skill tree
+│   ├── experience/           Tabbed experience page
+│   ├── projects/             Projects showcase
+│   ├── library/              Digital resource library
+│   ├── playground/           Logic gate + Git simulators
+│   └── contact/              Contact form with Formspree
 ├── components/
-│   ├── Layout.jsx               # Global layout wrapper
-│   ├── NavOrb.jsx               # Floating nav orb + command palette
-│   ├── ThemeProvider.jsx        # Theme context with localStorage persistence
-│   ├── Cursor.jsx               # Custom cursor with trail
-│   ├── SkillTree.jsx            # SVG skill tree component
-│   ├── GateSimulator.jsx        # Logic gate simulator
-│   └── GitSimulator.jsx         # Git command simulator
+│   ├── Layout.jsx            Global layout wrapper
+│   ├── NavOrb.jsx            Floating nav + command palette
+│   ├── ThemeProvider.jsx     Theme context with localStorage
+│   ├── Cursor.jsx            Custom cursor with trail
+│   ├── SkillTree.jsx         SVG skill tree component
+│   ├── GateSimulator.jsx     Logic gate simulator
+│   └── GitSimulator.jsx      Git command simulator
 ├── data/
-│   ├── content.json             # Profile, projects, skill tree, stats
-│   ├── assets.json              # Digital library categories and links
-│   └── experience.json          # Internships, volunteer, research
+│   ├── content.json          Profile, projects, skill tree
+│   ├── assets.json           Digital library resources
+│   └── experience.json       Internships, volunteer, research
 └── styles/
-└── globals.css              # CSS variables, themes, responsive grid
+    └── globals.css           CSS variables, themes, grids
+```
